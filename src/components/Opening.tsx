@@ -13,6 +13,8 @@ const Opening = ({onClick} : IOpening) => {
         <p>Hello this is your first birthday since we were in relationship</p>
         <p>I hope you are happy with me</p>
         <p>I don't have a special prayer for you, I will only pray for you to be happy whatever you do</p>
+        <p>someone who loves you</p>
+        <p>Harianto</p>
         <button className="my-10 border border-gray-800 p-2 rounded-lg hover:bg-pink-800" onClick={onClick}>
           click here
         </button>
