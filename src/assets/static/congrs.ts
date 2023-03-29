@@ -70,6 +70,11 @@ export const data = [
     profile: "ayu",
   },
   {
+    name: "Avicenna",
+    say: "HBD to uu, HBD icaa wish you all the best, and hope you become a better person and may good things come to you",
+    profile: "ayu",
+  },
+  {
     name: "Tara",
     say: "aku gak jago soal kaya gituan",
     profile: "ayu",
