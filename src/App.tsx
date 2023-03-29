@@ -17,7 +17,7 @@ const App = () => {
 
   const wrapClass = useMemo(
     () =>
-      `bg-slate-900 max-w-3xl w-full rounded-2xl ${
+      `bg-black max-w-3xl w-full rounded-2xl ${
         showOpening ? "h-screen" : " h-full"
       }`,
     [showOpening]

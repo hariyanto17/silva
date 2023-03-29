@@ -10,7 +10,7 @@ const Opening = ({onClick} : IOpening) => {
       <div className="w-full flex flex-col items-center text-white">
         <h1 className="text-xl text-center">Happy birth day beyb</h1>
         <img src={kiss} className="max-w-xs" />
-        <p>Hello this is your first birthday since we were in relationship</p>
+        <p>This is your first birthday since we were in relationship</p>
         <p>I hope you are happy with me</p>
         <p>I don't have a special prayer for you, I will only pray for you to be happy whatever you do</p>
         <p>someone who loves you</p>
