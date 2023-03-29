@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-400;
+  @apply bg-white
 }
 
 #root {
   @apply w-full flex justify-center;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

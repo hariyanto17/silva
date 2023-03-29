@@ -7,7 +7,7 @@ interface IOpening {
 const Opening = ({onClick} : IOpening) => {
   return (
     <div className="flex items-center justify-center w-full h-full">
-      <div className="bg-pink-600 w-full flex flex-col items-center">
+      <div className="bg-pink-600 w-full flex flex-col items-center text-slate-900">
         <h1 className="text-xl text-center">Happy birth day beyb</h1>
         <img src={kiss} className="max-w-xs" />
         <p>Hello this is your first birthday since we were in relationship</p>

@@ -10,12 +10,10 @@ interface ICongratulations {
 
 const Congratulations = ({ data }: ICongratulations) => {
   return (
-    <div className="bg-pink-600 m-3 rounded-2xl text-white p-3">
-      <div className="flex gap-2">
-        <p>{data.name}</p>
-      </div>
+    <div className="m-3 rounded-2xl text-white p-3">
+      <p className="font-bold py-4 text-3xl">{data.name}</p>
       <div className="px-6">
-        <p className="">{data.say}</p>
+        <p className="text-xl">{data.say}</p>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 export const data = [
   {
-    name: "ayu",
+    name: "Ayu",
     say: `Hi sa,
   Terimakasih sudah bertahan sampai hari ini. Terimakasih juga sudah berjuang sampai selama ini.
   Apapun yang sedang alysa alami, mungkin berat (contoh mengerjakan skripsi) dan melelahkan, tapi alysa kan di ciptakan bukan untuk gagal ataupun berakhir sia-sia.
@@ -15,12 +15,22 @@ export const data = [
     profile: "ayu",
   },
   {
+    name: "Nero",
+    say: "Happy Birthday Icaa 🎉 Wish you all the best for everything you do from one of your competitor on the land of dawn #cheers... P. S: Kurang kurangin main mage kyk gitu yaa...",
+    profile: "ayu",
+  },
+  {
+    name: "Och",
+    say: "Dear ica si anak sulunk, selamat bertambah umur. Semua doa yang terbaik buat kamu ya. Makin keren dalam menjalani hidup, makin kuat sama prinsip, jati diri maupun agamanya biar bisa jadi panutan yang baik buat sekitar. Again pibesdey ya 💗",
+    profile: "ayu",
+  },
+  {
     name: "Magentot",
     say: "Semoga Allah SWT selalu memberikan rahmat di sepanjang fase kehidupan kamu ke depannya, termasuk kesehatan. Selalu diberi umur yang berkah, dan semoga Allah memenuhi hidupmu dengan saat-saat bahagia tanpa akhir, kejutan indah yang tak terhitung jumlahnya, dan kesuksesan tanpa batas... aamiin allahumma aamiin",
     profile: "ayu",
   },
   {
-    name: "bundav",
+    name: "Bundav",
     say: "Buat alyssa....yaumul milad my girls....barakalloh fii umrik...sehat sukses terkabul apa yg di cita2kan...bahagia dunia akhirat.😘😘😘😘😘😘 ",
     profile: "ayu",
   },
@@ -30,7 +40,7 @@ export const data = [
     profile: "ayu",
   },
   {
-    name: "taa bocil kematian",
+    name: "Ta'a bocil kematian",
     say: "Selamat ulang tahun, menua memang menyebalkan. Namun, tetaplah menjadi sahabat yang menyenangkan bagiku!, teman! Tambah umur berarti harus tambah dewasa juga. Semoga Tuhan memberikanmu kesuksesan dan kelancaran rezeki.",
     profile: "ayu",
   },
@@ -56,7 +66,7 @@ export const data = [
   },
   {
     name: "Rumple",
-    say: "HBD Alyssa, semoga amal & ibadahnya d terima d sisi-Nya 💪, ps: main parsha jangan lupa posisioning yaaa",
+    say: "HBD Alyssa, semoga amal & ibadahnya d terima d sisi-Nya 💪, P. S: main parsha jangan lupa posisioning yaaa",
     profile: "ayu",
   },
   {

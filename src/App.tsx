@@ -1,14 +1,17 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { audioback } from "./assets/audio";
 import { Firework, FriendsSay, Opening, ShowIf } from "./components";
 
 const App = () => {
   const [showOpening, setShowOpening] = useState(true);
-  const [firework, setFirework] = useState(true);
+  const [firework, setFirework] = useState(false);
+  const [audio] = useState(new Audio(audioback));
+  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     if (firework)
       setTimeout(() => {
-        setFirework(false);
+        setPlaying(false);
       }, 10000);
   }, [setFirework, firework]);
 
@@ -20,17 +23,30 @@ const App = () => {
     [showOpening]
   );
 
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+    audio.loop = true;
+  }, [playing]);
 
+  useEffect(() => {
+    audio.addEventListener("ended", () => setPlaying(false));
+    return () => {
+      audio.removeEventListener("ended", () => setPlaying(false));
+    };
+  }, []);
 
-  if(firework) return <Firework/>
+  const handleCLick = useCallback(() => {
+    setShowOpening((prev) => !prev);
+    setFirework(true);
+    setPlaying(true);
+  }, [setShowOpening, setFirework]);
+
+  if (firework) return <Firework showOpening={showOpening} />;
 
   return (
     <div className={wrapClass}>
       <ShowIf show={showOpening}>
-        <Opening onClick={() => setShowOpening((prev) => !prev)} />
-      </ShowIf>
-      <ShowIf show={!showOpening}>
-        <FriendsSay />
+        <Opening onClick={handleCLick} />
       </ShowIf>
     </div>
   );

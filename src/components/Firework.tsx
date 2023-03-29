@@ -1,22 +1,20 @@
-import React, { RefObject, useEffect, useRef, useState } from "react";
-import { audioback } from "../assets/audio";
+import { RefObject, useEffect, useRef, useState } from "react";
+import FriendsSay from "./FriendsSay";
+import ShowIf from "./ShowIf";
 
-const Firework = () => {
+const Firework = ({ showOpening }: { showOpening: boolean }) => {
   const ref = useRef() as RefObject<HTMLCanvasElement>;
-  const [audio] = useState(new Audio(audioback));
-  const [playing, setPlaying] = useState(true);
+  const [friendSay, setFriendSay] = useState(false)
 
   useEffect(() => {
-    playing ? audio.play() : audio.pause();
-    audio.loop = true;
-  }, [playing]);
+    if (!friendSay)
+      setTimeout(() => {
+        console.log('hello', friendSay)
+        setFriendSay(true);
+      }, 10000);
+  }, [friendSay, setFriendSay]);
 
-  useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(false));
-    return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
-    };
-  }, []);
+  console.log('f', friendSay)
 
   useEffect(() => {
     let c = ref.current;
@@ -166,10 +164,17 @@ const Firework = () => {
   return (
     <div className="relative h-screen w-screen">
       <canvas ref={ref}></canvas>
-      <div className="absolute top-0 z-10 text-white flex justify-center items-center w-full h-full flex-col text-3xl gap-10">
-        <p className="">Happy birthday</p>
-        <p>Silva dian</p>
-      </div>
+      <ShowIf show={!friendSay}>
+        <div className="absolute top-0 z-10 text-white flex justify-center items-center w-full h-full flex-col text-3xl gap-10">
+          <p className="">Happy birthday</p>
+          <p>Silva dian</p>
+        </div>
+      </ShowIf>
+      <ShowIf show={friendSay}>
+        <div className="absolute top-0 z-10 text-white flex justify-center items-center w-full h-full flex-col text-3xl gap-10">
+          <FriendsSay />
+        </div>
+      </ShowIf>
     </div>
   );
 };
