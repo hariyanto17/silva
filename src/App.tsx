@@ -25,7 +25,7 @@ const App = () => {
 
   useEffect(() => {
     playing ? audio.play() : audio.pause();
-    audio.loop = true;
+    audio.loop = playing;
   }, [playing]);
 
   useEffect(() => {
